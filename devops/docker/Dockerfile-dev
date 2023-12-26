@@ -1,0 +1,18 @@
+FROM mateina-server-app
+
+WORKDIR /root
+
+RUN apt-get update
+
+RUN apt-get install -y \
+    zsh \
+    ripgrep \
+    fd-find \
+    exa \
+    fzf
+
+WORKDIR /mateina
+
+# TO BE DONE: add properly loading zsh configuration files
+
+CMD ["zsh"]
